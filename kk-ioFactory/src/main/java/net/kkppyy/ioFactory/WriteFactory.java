@@ -14,9 +14,9 @@ public class WriteFactory {
 		try {
 			Class<Write> clz = null;
 			if (saveMode.equals("oss"))
-				clz = (Class<Write>) Class.forName("cn.rebim.ossIO.write.WriteService");
+				clz = (Class<Write>) Class.forName("net.kkppyy.ossIO.write.WriteService");
 			else
-				clz = (Class<Write>) Class.forName("fileSystemIO.write.WriteService");
+				clz = (Class<Write>) Class.forName("net.kkppyy.fileSystemIO.write.WriteService");
 			Constructor<Write> constructor = clz.getConstructor();
 			write = (Write) constructor.newInstance();
 		} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException

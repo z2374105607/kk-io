@@ -3,8 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.kkppyy</groupId>
 	<artifactId>kk-io</artifactId>
-	<version>0.0.1</version>
+	<version>${revision}</version>
 	<packaging>pom</packaging>
+	<name>kk-io</name>
 	<description>io工具类</description>
 	<url>https://www.kkppyy.net/</url>
 	<modules>
@@ -14,6 +15,7 @@
 		<module>kk-ioFactory</module>
 	</modules>
 	<properties>
+		<revision>0.0.5</revision>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -32,6 +34,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>kk-io</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -108,7 +111,7 @@
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>kk常用工具</distribution>
+			<distribution>io常用工具</distribution>
 		</license>
 	</licenses>
 
@@ -132,8 +135,8 @@
 	</distributionManagement>
 	<scm>
 		<tag>master</tag>
-		<url>git@github.com:z2374105607/kk-threadPool.git</url>
-		<connection>git@github.com:z2374105607/kk-threadPool.git</connection>
-		<developerConnection>git@github.com:z2374105607/kk-threadPool.git</developerConnection>
+		<url>git@github.com:z2374105607/kk-io.git</url>
+		<connection>git@github.com:z2374105607/kk-io.git</connection>
+		<developerConnection>git@github.com:z2374105607/kk-io.git</developerConnection>
 	</scm>
 </project>

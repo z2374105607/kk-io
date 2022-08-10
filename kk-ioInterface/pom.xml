@@ -3,7 +3,7 @@
   <parent>
     <groupId>net.kkppyy</groupId>
     <artifactId>kk-io</artifactId>
-    <version>0.0.1</version>
+    <version>${revision}</version>
   </parent>
   <artifactId>kk-ioInterface</artifactId>
   <build/>

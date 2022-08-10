@@ -4,13 +4,9 @@
 	<parent>
 		<groupId>net.kkppyy</groupId>
 		<artifactId>kk-io</artifactId>
-		<version>0.0.1</version>
+		<version>${revision}</version>
 	</parent>
 	<artifactId>kk-ioFactory</artifactId>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<skipTests>true</skipTests>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>net.kkppyy</groupId>
@@ -34,5 +30,20 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<build />
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>7.1.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

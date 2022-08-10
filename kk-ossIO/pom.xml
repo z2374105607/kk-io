@@ -4,13 +4,9 @@
 	<parent>
 		<groupId>net.kkppyy</groupId>
 		<artifactId>kk-io</artifactId>
-		<version>0.0.1</version>
+		<version>${revision}</version>
 	</parent>
 	<artifactId>kk-ossIO</artifactId>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<skipTests>true</skipTests>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -22,6 +18,20 @@
 			<groupId>com.aliyun.oss</groupId>
 			<artifactId>aliyun-sdk-oss</artifactId>
 			<version>3.15.1</version>
+			<exclusions>
+				<!--排除tomcat依赖 -->
+				<exclusion>
+					<groupId>com.google.code.gson</groupId>
+					<artifactId>gson</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<!--强制更新oss依赖的gson版本  -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.9.1</version>
 		</dependency>
 		<dependency>
 			<groupId>net.kkppyy</groupId>

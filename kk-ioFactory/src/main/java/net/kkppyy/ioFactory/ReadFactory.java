@@ -16,9 +16,9 @@ public class ReadFactory {
 			if (null == read) {
 				Class<Read> clz = null;
 				if (saveMode.equals("oss"))
-					clz = (Class<Read>) Class.forName("cn.rebim.ossIO.read.ReadService");
+					clz = (Class<Read>) Class.forName("net.kkppyy.ossIO.read.ReadService");
 				else
-					clz = (Class<Read>) Class.forName("fileSystemIO.read.ReadService");
+					clz = (Class<Read>) Class.forName("net.kkppyy.fileSystemIO.read.ReadService");
 				Constructor<Read> constructor = clz.getConstructor();
 				read = (Read) constructor.newInstance();
 			}

@@ -16,10 +16,10 @@ public class IsExistFactory {
 			if (null == isExist) {
 				Class<Read> clz = null;
 				if (saveMode.equals("oss"))
-					clz = (Class<Read>) Class.forName("cn.rebim.ossIO.isExists.IsExistService");
+					clz = (Class<Read>) Class.forName("net.kkppyy.ossIO.isExists.IsExistService");
 				else {
 					
-					clz = (Class<Read>) Class.forName("fileSystemIO.read.ReadService");
+					clz = (Class<Read>) Class.forName("net.kkppyy.fileSystemIO.read.ReadService");
 				}
 				Constructor<Read> constructor = clz.getConstructor();
 				isExist = (IsExist) constructor.newInstance();
