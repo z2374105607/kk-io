@@ -23,8 +23,8 @@ public class WriteServiceTest {
 	@Test
 	public void writeTest(){
 		WriteService writeService=new WriteService();
-		boolean is=writeService.write("��خ��ĿB2�������������.rebim", ReadbytesUtil.readFromByteFile("G:/filemanage/��خ��ĿB2�������������.rebim"));
-		System.out.println("�Ƿ��ϴ��ɹ�"+is);
+		boolean is=writeService.write("/番禺项目B2类型1.rebim", ReadbytesUtil.readFromByteFile("G:/filemanage/番禺项目B2类型.rebim"));
+		System.out.println("文件写入完成"+is);
 	}
 	@Test
 	public void writePerformanceTest(){
@@ -182,7 +182,7 @@ public class WriteServiceTest {
 	@Test
 	public void writeMateTest(){
 		WriteService writeService=new WriteService();
-		boolean is=writeService.write("gzipTest1.bin", ReadbytesUtil.readFromByteFile("G:/filemanage/test/四个小桌子/637516448294386333.bin"),"");
+		boolean is=writeService.write("gzipTest1.bin", ReadbytesUtil.readFromByteFile("G:/filemanage/test/四个小桌子/637516448294386333.bin"),"gzip");
 		System.out.println("gzipTest"+is);
 	}
 }

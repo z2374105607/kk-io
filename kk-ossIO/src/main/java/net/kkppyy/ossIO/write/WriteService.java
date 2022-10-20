@@ -18,6 +18,9 @@ public class WriteService implements Write {
 		// TODO Auto-generated method stub
 		try {
 			InputStream is = new ByteArrayInputStream(bytes);
+			if(path.startsWith("/")){
+				path=path.replaceFirst("/", "");
+			}
 			PutObjectResult putObjectResult=OSSClientFactory.getInstance().putObject(bucketName, path, is);
 			//System.out.println("putObjectResult ETAG:"+putObjectResult.getETag());
 			return true;
@@ -44,6 +47,9 @@ public class WriteService implements Write {
 			OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
 			ossClient.putObject(bucketName, path, is,meta);
 			ossClient.shutdown();*/
+			if(path.startsWith("/")){
+				path=path.replaceFirst("/", "");
+			}
 			PutObjectResult putObjectResult = OSSClientFactory.getInstance().putObject(bucketName, path, is,meta);
 			// System.out.println("putObjectResult
 			// ETAG:"+putObjectResult.getETag());

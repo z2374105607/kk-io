@@ -4,14 +4,14 @@
 	<parent>
 		<groupId>net.kkppyy</groupId>
 		<artifactId>kk-io</artifactId>
-		<version>${revision}</version>
+		<version>0.0.10</version>
 	</parent>
 	<artifactId>kk-FileSyatemIO</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>net.kkppyy</groupId>
 			<artifactId>kk-ioInterface</artifactId>
-			<version>LATEST</version>
+			<version>0.0.10</version>
 		</dependency>
 	</dependencies>
 	<build />
